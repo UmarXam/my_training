@@ -16,6 +16,6 @@ print()
 
 #4th program
 x = 123.456
-y = float(123.456)
+y = float(x)
 z = int(y * 10)
 print(z % 10)
