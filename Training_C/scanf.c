@@ -1,28 +1,32 @@
+// scanf.c
+// scanf.c -- demonstrates scanf() working with different format specifiers. 
 #include <stdio.h>
 
 int main(void)
 {
-    float gift1, gift2, gift3, gift4, gift5;
-    float total;
-    char name[30];
 
-    printf("What is your name? ");
-    scanf("%s", name);
-    printf("How many dollars are you ready to spent on your mother? ");
-    scanf("%f", &gift1);
-    printf("How many dollars are you ready to spent on your father? ");
-    scanf("%f", &gift2);
-    printf("How many dollars are you ready to spent on your sister? ");
-    scanf("%f", &gift3);
-    printf("How many dollars are you ready to spent on your brother? ");
-    scanf("%f", &gift4);
-    printf("How many dollars are you ready to spent on your aunt? ");
-    scanf("%f", &gift5);
-    
-    total = gift1 + gift2 + gift3 + gift4 + gift5;
-    
-    printf("\nTotal sum you, %s, are ready to spend on gifts is: $%.2f\n", name, total);
-    
+    char topping[5];
+    int slices;
+    int day, month, year;
+    double price;
+
+    printf("How many dollars does the pizza cost in your region? ");
+    printf("(Enter as $XX.XX)\n");
+    scanf(" $%lf", &price);
+
+    printf("What is your favourite topping? (One word)\n");
+    scanf(" %s", topping);
+
+    printf("How many slices can you eat at once?\n");
+    scanf(" %d", &slices);
+
+    printf("What is the date today? (Enter as DD/MM/YY)\n");
+    scanf(" %d/%d/%d", &day, &month, &year);
+
+    // Output results
+    printf("\n\nWhy not treat yourself to dinner on %02d/%02d/%d", day, month, year);
+    printf(" and eat %d slices of pizza with %s topping?\n", slices, topping);
+    printf("It will cost only $%.2f\n", price);
+
     return 0;
-
 }

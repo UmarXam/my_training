@@ -1,4 +1,4 @@
-#module_dop.py
+#module_dop.py skibidi dop es es
 
 grades = [[5, 3, 3, 5, 4], [2, 2, 2, 3], [4, 5, 5, 2], [4, 4, 3], [5, 5, 5, 4, 5]]
 students = {'Johnny', 'Bilbo', 'Steve', 'Kendrick', 'Aaron'}
@@ -13,8 +13,9 @@ avg_grades = {sort_stud[0]: sum(grades[0]) / len(grades[0]),
 print(avg_grades)
 
     # второе решение
-    # мне очень не понравилось первый вариант,
+    # мне очень не понравилcя первый вариант,
     # поэтому пришлось углубиться в вопрос
 avg_grade = {student: round((sum(grades[i]) / len(grades[i])), 2)
                                 for i, student in enumerate(sort_stud)}
+
 print(avg_grade)
